@@ -1,5 +1,8 @@
 FROM node:18-alpine
 
+# Install Python and other dependencies for youtube-dl-exec
+RUN apk add --no-cache python3 py3-pip ffmpeg
+
 WORKDIR /app
 
 # Package files をコピー
